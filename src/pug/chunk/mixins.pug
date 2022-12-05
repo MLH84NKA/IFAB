@@ -8,4 +8,14 @@ mixin card(title,text,img)
     li(style="background-image: url(../img/info/" + img + ");").info-card__item
         h2.info-card__title= title 
         p.info-card__text= text
-        .info-card__back 
+        .info-card__back
+
+mixin geo(colour,country,store,link="")
+    li.geo-countries__item
+        svg(width="15", height="30", viewBox="0 0 15 30", fill=colour, xmlns="http://www.w3.org/2000/svg")
+            ellipse(cx="7.07641", cy="27.1199", rx="2.69751", ry="2.87969", fill=colour)
+            path(d="M14.9968 8.25026C14.9968 12.6984 7.50359 22.336 7.50359 22.336C7.50359 22.336 0.0034726 12.6984 0.0034726 8.25026C-0.0270788 7.17881 0.144216 6.1117 0.507212 5.11225C0.870208 4.11279 1.41751 3.20132 2.11666 2.43189C2.81581 1.66246 3.65255 1.05074 4.57731 0.632997C5.50206 0.215256 6.49597 0 7.50011 0C8.50425 0 9.49816 0.215256 10.4229 0.632997C11.3477 1.05074 12.1844 1.66246 12.8836 2.43189C13.5827 3.20132 14.13 4.11279 14.493 5.11225C14.856 6.1117 15.0273 7.17881 14.9968 8.25026Z", fill=colour)
+        p.geo-countries__text= "в " + country + " - " + store + " "
+            if (link != "") 
+                a(href= link, target="_blank").geo-countries__link= "(" + link + ")"
+

@@ -11,7 +11,7 @@ a{
     color: $black;
 }
 .container{
-    max-width: 1640px;
+    max-width: 1720px;
     padding: 0 20px;
     margin: 0 auto;
 }
@@ -30,6 +30,15 @@ button{
     font-weight: 700;
     font-size: 20px;
     cursor: pointer;
+}
+.title{
+    text-align: center;
+    color: $blue;
+    font-family: "raleway";
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 24px;
+    
 }
 
 @import "block/*.scss";
