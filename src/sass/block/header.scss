@@ -1,0 +1,35 @@
+.header{
+    position: sticky;
+    padding: 20px 0;
+    z-index: 5;
+    box-shadow: 0px -2px 15px rgba(0, 0, 0, 0.18);
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__logo{
+        max-height: 92px;
+    }
+    
+}
+.header-nav{
+    display: flex;
+    column-gap: 80px;
+    &__link{
+        transition: all .2s linear;
+        color: $grey;
+        border-bottom: 2px solid rgba(0, 75, 169, 0);
+        text-transform: uppercase;
+        padding-bottom: 4px;
+        font-family: 'raleway';
+        font-weight: 500;
+        line-height: 108.19%;
+        &:hover{
+            color: $blue;
+            
+            font-weight: 500;
+            border-color: rgba(0, 75, 169, 1);
+        }
+    }
+}

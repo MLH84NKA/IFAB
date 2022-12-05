@@ -1,0 +1,35 @@
+@import "fonts/fonts.scss";
+@import "variables/vars.scss";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: $black;
+}
+.container{
+    max-width: 1640px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+ul {
+    list-style: none;
+}
+body{
+    font-family: 'ptsans';
+    font-size: 20px;
+}
+button{
+    outline: none;
+    border: none;
+    color: $white;
+    font-family: 'raleway';
+    font-weight: 700;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+@import "block/*.scss";

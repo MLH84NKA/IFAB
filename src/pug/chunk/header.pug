@@ -1,0 +1,9 @@
+header.header
+    .container
+        .header__wrapper
+            a(href="index.html").header__logo
+                img(src="/img/header/logo.png", alt="Logo").header__img 
+            nav.header__nav 
+                ul.header-nav
+                    each item in link
+                        +nav(item.name, item.link)

@@ -36,7 +36,7 @@ const scss = () => {
         .pipe(webpCss())
         .pipe(autoprefixer())
         .pipe(shorthand())
-        .pipe(groupCssMediaQueries())
+        // .pipe(groupCssMediaQueries())
         .pipe(dest(path.scss.dest, { sourcemaps: true}))
         .pipe(rename({suffix: ".min"}))
         .pipe(csso())

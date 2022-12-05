@@ -4,3 +4,15 @@ block vars
     - let title = 'Main';
     
 block page
+    section.info
+        .container 
+            .info__wrapper 
+                h1.info__title Передовые технологии промышленной фильтрации
+                p.info__text С 1960 года IFAB поставляет комплексные решения фильтрации для разных отраслей по всему миру
+                button(type="button").info__btn Получить консультацию
+                .info-card 
+                    ul.info-card__list
+                        each item in card 
+                            +card(item.title,item.text,item.img) 
+                    
+

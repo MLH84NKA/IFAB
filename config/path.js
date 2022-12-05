@@ -32,7 +32,7 @@ module.exports = {
         dest: pathDest + "/js"
     },
     img: {
-        src: pathSrc + "/img/*.*",
+        src: pathSrc + "/img/**/*.*",
         watch: pathSrc + "/img/**/*.{png, jpg, jpeg, gif, svg}",
         dest: pathDest + "/img"
     },

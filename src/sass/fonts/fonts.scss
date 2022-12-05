@@ -1,0 +1,31 @@
+@font-face {
+    font-family: raleway;
+    /* Имя шрифта */
+    src: url(../font/raleway-bold.woff) format('woff'),
+        url(../font/raleway-bold.ttf) format('truetype');
+        font-weight: 700;
+    /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: raleway;
+    /* Имя шрифта */
+    src: url(../font/raleway-semibold.woff) format('woff'),
+        url(../font/raleway-semibold.ttf) format('truetype');
+        font-weight: 600;
+    /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: raleway;
+    /* Имя шрифта */
+    src: url(../font/raleway-medium.woff) format('woff'),
+        url(../font/raleway-medium.ttf) format('truetype');
+        font-weight: 500;
+    /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: ptsans;
+    /* Имя шрифта */
+    src: url(../font/ptsans-regular.woff) format('woff'),
+        url(../font/ptsans-regular.ttf) format('truetype');
+    /* Путь к файлу со шрифтом */
+}

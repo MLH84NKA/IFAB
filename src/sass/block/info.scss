@@ -1,0 +1,80 @@
+.info{
+    background-color: $info;
+    padding-top: 120px;
+    padding-bottom: 140px;
+    background-image: url("../img/info/background.png");
+    background-position: left calc(50% - 270px) top calc(50% - 95px);
+    background-repeat: no-repeat;
+    &__title{
+        font-family: 'raleway';
+        font-weight: 700;
+        color: $blue;
+        font-size: 56px;
+        line-height: 115%;
+        margin-bottom: 25px;
+        max-width: 830px;
+    }
+    &__text{
+        color: $black;
+        font-size: 24px;
+        font-family: 'ptsans';
+        max-width: 547px;
+        margin-bottom: 120px;
+    }
+    &__btn{
+        background-color: $orange;
+        width: 313px;
+        height: 75px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 38px;
+        margin-bottom: 166px;
+    }
+}
+.info-card{
+    &__list{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+    &__item{
+        // background-image: url("../img/info/12.jpg");
+        position: relative;
+        display: block;
+        border-radius: 30px;
+        // background-color: $blue;
+        padding: 25px;
+        color: $white;
+        width: 402px;
+    }
+    &__title{
+        position: relative;
+        z-index: 2;
+        font-size: 24px;
+        max-width: 228px;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 10px;
+        line-height: 110%;
+    }
+    &__text{
+        position: relative;
+        z-index: 2;
+        font-weight: 400;
+        max-width: 236px;
+        line-height: 108%;
+    }
+    &__back{
+        z-index: 1;
+        border-radius: 30px;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: $blue;
+        top: 0;
+        left: 0;
+        opacity: 0.85;
+    }
+}

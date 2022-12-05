@@ -1,0 +1,11 @@
+mixin nav(name,link)
+    li.header-nav__item
+        a(href= link).header-nav__link= name
+        if name == "Продукция"
+            button(type="button").header-nav__btn
+
+mixin card(title,text,img)
+    li(style="background-image: url(../img/info/" + img + ");").info-card__item
+        h2.info-card__title= title 
+        p.info-card__text= text
+        .info-card__back 
