@@ -5,3 +5,9 @@ if (header) {
         headerLink[1].classList.add('.header-nav__item--extends');
     }
 }
+var swiper = new Swiper(".mySwiper", {
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true
+    },
+  });

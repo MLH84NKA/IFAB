@@ -18,9 +18,11 @@ mixin geo(colour,country,store,link="")
         p.geo-countries__text= "в " + country + " - " + store + " "
             if (link != "") 
                 a(href= link, target="_blank").geo-countries__link= "(" + link + ")"
+
 mixin companies(img)
     li.companies__item 
         img(src="/img/companies/"+img, alt=img).companies__img
+
 mixin catalog(name,img,link="")
     li.catalog-cell
         img(src="/img/catalog/"+img , alt=img)

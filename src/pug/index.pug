@@ -2,7 +2,11 @@ extends layout/app
 
 block vars 
     - let title = 'Main';
+
+block link
+    link(rel="stylesheet",href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css")
     
+
 block page
     section.info
         .container 
@@ -34,8 +38,28 @@ block page
         .container 
             .catalog__title.title Каталог решений для Вашего производства
             ul.catalog__list 
-                
-            a(href="").catalog__link
+                each item in catalog 
+                    +catalog(item.name,item.img)
+            .catalog-link        
+                a(href="").catalog__link Посмотреть всю продукцию
+    section.consult 
+        .container
+            .consult__wrapper 
+                .swiper.mySwiper 
+                    .swiper-wrapper
+                        .swiper-slide 1 
+                        .swiper-slide 1 
+                        .swiper-slide 1 
+                        .swiper-slide 1
+                    .swiper-pagination 
+                .consult__form 
+                    h1.consult__title Мы имеем опыт решения задач, связанных с фильтрацией и очисткой продуктов и сред на разных производствах
+                    p.consult__subtitle Оставьте данные для заказа или получения консультации
+                    include chunk/form
+
+
+block scripts 
+     script(src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js")
 
                     
 

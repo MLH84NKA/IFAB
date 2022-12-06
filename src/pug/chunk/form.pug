@@ -1,0 +1,8 @@
+form.form(action="#")
+    input(type="text", placeholder="Компания", name="company").form__text 
+    input(type="text", placeholder="Номер телефона", name="tel").form__text 
+    input(type="email", placeholder="E-mail", name="email").form__text 
+    input(type="text", placeholder="Опишите ваш запрос", name="desc").form__text
+    input(type="submit", value="Отправить запрос")
+p.consult__warning Нажимая на кнопку, вы даете 
+    a(href="#", target="_blank").consult__link согласие на обработку персональных данных
