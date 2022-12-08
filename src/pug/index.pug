@@ -47,10 +47,8 @@ block page
             .consult__wrapper 
                 .swiper.mySwiper 
                     .swiper-wrapper
-                        .swiper-slide 1 
-                        .swiper-slide 1 
-                        .swiper-slide 1 
-                        .swiper-slide 1
+                        each item in consult 
+                            +slide(item.title,item.img)
                     .swiper-pagination 
                 .consult__form 
                     h1.consult__title Мы имеем опыт решения задач, связанных с фильтрацией и очисткой продуктов и сред на разных производствах

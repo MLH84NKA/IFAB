@@ -3,4 +3,51 @@
     flex-direction: column;
     row-gap: 15px;
     max-width: 762px;
+    &__text{
+        padding: 25px 37px 24px 37px;
+        background-color: #FAFAFA;
+        border: 1px solid #E6E6E6;
+        color: #848484;
+        font-family: 'ptsans';
+        font-size: 24px;
+        line-height: 108.19%;
+        height: 75px;
+    }
+    &__textarea{
+        padding: 25px 35px 24px 35px;
+        width: 100%;
+        resize: none;
+        height: 165px;
+    }
+    &__submit{
+        margin-top: 15px;
+        width: 368px;
+        height: 75px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $orange;
+        border: none;
+        font-size: 20px;
+        color: $white;
+        font-family: 'raleway';
+        border-radius: 38px;
+        font-weight: 700;
+        cursor: pointer;
+    }
+    &__inner{
+        display: flex;
+        justify-content: center;
+    }
+    &__warning{
+        margin-top: -3px;
+        text-align: center;
+        font-size: 18px;
+        color: #848484;
+        
+    }
+    &__link{
+        color: inherit;
+        text-decoration: underline;
+    }
 }

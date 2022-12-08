@@ -1,23 +1,72 @@
-.consult{
-    &__wrapper{
+.consult {
+    &__wrapper {
         display: flex;
         justify-content: space-between;
     }
-    &__title{
+
+    &__title {
         font-family: 'raleway';
         font-weight: 700;
         font-size: 56px;
         color: $blue;
         margin-bottom: 70px;
         max-width: 904px;
+        line-height: 60.48px;
     }
-    &__subtitle{
+
+    &__subtitle {
         margin-bottom: 30px;
         font-family: 'raleway';
         font-weight: 700;
         font-size: 24px;
+        line-height: 25.92px;
     }
 }
-.swiper{
+
+.swiper {
     max-width: 688px;
+}
+
+.swiper-slide {
+    
+    &__background {
+        padding: 40px;
+        position: relative;
+        height: 860px;
+        display: flex;
+        align-items: flex-end;
+    }
+
+    &__gradient {
+        position: absolute;
+        background: linear-gradient(180deg, rgba(0, 75, 169, 0) 0%, #004BA9 66.67%);
+        opacity: 0.8;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+    }
+    &__title{
+        z-index: 1;
+        color: $white;
+        font-size: 36px;
+        max-width: 360px;
+        font-family: 'raleway';
+        font-weight: 700;
+    }
+}
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+    bottom: 0px;
+}
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+    margin: 0 5px;
+}
+.swiper-pagination-bullet{
+    width: 17px;
+    height: 17px;
+    background-color: #E8E8E8;
+    opacity: 1;
+}
+.swiper-pagination-bullet-active{
+    background-color: $blue;
 }

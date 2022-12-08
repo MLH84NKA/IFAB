@@ -30,4 +30,13 @@ mixin catalog(name,img,link="")
             p.catalog-cell__name= name 
             a(href=link).catalog-cell__link 
 
+mixin slide(title,img)
+    .swiper-slide
+        div(style="background-image: url('../img/consult/"+img+"');").swiper-slide__background
+            .swiper-slide__gradient
+            if (img == '5.png') 
+                h2(style="margin-bottom:39px;").swiper-slide__title= title
+            else 
+                h2.swiper-slide__title= title
+
 
