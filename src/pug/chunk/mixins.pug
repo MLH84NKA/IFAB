@@ -43,9 +43,9 @@ mixin contacts(img,text,href="")
     li.contacts-list__item 
         .contacts-list__inner 
             img(src="img/contacts/"+img, alt=img).contacts-list__img
-        if (href == "")
-            p.contacts-list__text= text
-        else
-            a(href=href).contacts-list__text= text
+            if (href == "")
+                p.contacts-list__text= text
+            else
+                a(href=href).contacts-list__text= text
 
 

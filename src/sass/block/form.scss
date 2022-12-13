@@ -34,6 +34,10 @@
         border-radius: 38px;
         font-weight: 700;
         cursor: pointer;
+        transition: all .3s linear;
+        &:hover{
+            background-color: $lightorange;
+        }
     }
     &__inner{
         display: flex;

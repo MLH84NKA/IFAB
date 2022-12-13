@@ -56,8 +56,8 @@ block page
                     include chunk/form
     section.contacts
         .container 
-            .contacts-wrapper 
-                .map 
+            .contacts__wrapper 
+                .map(id = "map") 
                 ul.contacts-list
                     li.contacts-list__item 
                         a(href="index.html").contacts-logo
@@ -70,6 +70,7 @@ block page
 
 block scripts 
      script(src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js")
+     script(src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU", type="text/javascript")
 
                     
 

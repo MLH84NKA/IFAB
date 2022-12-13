@@ -30,6 +30,10 @@
         align-items: center;
         border-radius: 38px;
         margin-bottom: 166px;
+        transition: all .3s linear;
+        &:hover{
+            background-color: $lightorange;
+        }
     }
 }
 .info-card{

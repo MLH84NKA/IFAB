@@ -23,6 +23,10 @@
         margin-top: 80px;
         margin-bottom: 160px;
         background-color: $orange;
+        transition: all .3s linear;
+        &:hover{
+            background-color: $lightorange;
+        }
     }
 }
 .catalog-link{
@@ -50,6 +54,10 @@
         width: 62px;
         height: 62px;
         background-color: $blue;
+        transition: all .3s linear;
+        &:hover{
+            background-color: $lightblue;
+        }
         &::before{
             content: '';
             position: absolute;
