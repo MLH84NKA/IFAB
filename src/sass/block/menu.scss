@@ -1,0 +1,47 @@
+.menu{
+    opacity: 0;
+    border-top: 6px solid $blue;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    right: calc(50% - 130px);
+    background-color: $white;
+    text-transform: uppercase;
+    transform: translateX(50%);
+    transition: all .3s linear;
+    &__wrapper{
+        padding: 36px 60px 40px 60px;
+        width: 1428px;
+        height: 270px;
+    }
+    &__list{
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+        &:last-child{
+        
+        }
+    }
+    &__link{
+        display: block;
+        margin-bottom: 20px;
+        font-family: 'raleway';
+        font-weight: 700;
+        font-size: 20px;
+
+    }
+}
+.menu--active{
+    bottom: -275px;
+    opacity: 1;
+}
+.menu-sublist{
+    &__link{
+        display: block;
+        color: $grey;
+        margin-bottom: 20px;
+        max-width: 227px;
+        font-weight: 500;
+        line-height: 108%;
+    }
+}

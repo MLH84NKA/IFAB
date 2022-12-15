@@ -7,6 +7,17 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        position: relative;
+        z-index: 3;
+    }
+    &__back{
+        background-color: $white;
+        height: 100%;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 2;
+        position: absolute;
     }
     &__logo{
         max-height: 92px;
@@ -16,15 +27,10 @@
 .header-nav{
     display: flex;
     column-gap: 80px;
-    &__link{
-        transition: all .2s linear;
+    &__item{
         color: $grey;
+        transition: all .2s linear;
         border-bottom: 2px solid rgba(0, 75, 169, 0);
-        text-transform: uppercase;
-        padding-bottom: 4px;
-        font-family: 'raleway';
-        font-weight: 500;
-        line-height: 108.19%;
         &:hover{
             color: $blue;
             
@@ -32,4 +38,33 @@
             border-color: rgba(0, 75, 169, 1);
         }
     }
+    &__item--active{
+            color: $blue;
+            font-weight: 500;
+            border-color: rgba(0, 75, 169, 1);
+    }
+    &__link{
+        
+        color: inherit;
+        text-transform: uppercase;
+        padding-bottom: 4px;
+        font-family: 'raleway';
+        font-weight: 500;
+        line-height: 108.19%;
+        
+    }
+  
+    &__btn{
+        width: 13px;
+        height: 11px;
+        background-image: url("/img/header/arrow.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: all .3s linear;
+        fill: blue;
+    }
+    &__btn--active{
+        transform: rotate(180deg);
+    }
+
 }

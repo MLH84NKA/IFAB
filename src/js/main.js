@@ -7,13 +7,13 @@ if (header) {
 }
 var swiper = new Swiper(".mySwiper", {
     pagination: {
-      el: ".swiper-pagination",
-      clickable: true
+        el: ".swiper-pagination",
+        clickable: true
     },
-  });
+});
 
 ymaps.ready(init);
-function init(){
+function init() {
     // Создание карты.
     var myMap = new ymaps.Map("map", {
         // Координаты центра карты.
@@ -21,7 +21,7 @@ function init(){
         // Чтобы не определять координаты центра карты вручную,
         // воспользуйтесь инструментом Определение координат.
         center: [59.851422, 30.300983],
-        
+
         // Уровень масштабирования. Допустимые значения:
         // от 0 (весь мир) до 19.
         zoom: 13.5
@@ -34,8 +34,19 @@ function init(){
     );
     myMap.geoObjects.add(placemark);
 }
-        
-      
+
+// Header
+let headerBtn = document.querySelector(".header-nav__btn");
+let menu = document.querySelector(".menu");
+if (headerBtn) {
+    headerBtn.addEventListener("click", function () {
+        headerBtn.classList.toggle("header-nav__btn--active");
+        if (menu){
+            menu.classList.toggle("menu--active")
+        }
+    })
+};
+
 
 
 
