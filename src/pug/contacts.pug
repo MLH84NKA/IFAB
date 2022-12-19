@@ -1,0 +1,22 @@
+extends layout/app
+
+block vars 
+    - let title = 'Contacts';
+    - let navname = "Контакты";
+    - let width = "972px";
+    - let height = "364px";
+    
+
+block page
+    section.contacts-page
+        .container
+            .contacts-page__wrapper
+                .contacts-page__image 
+                    img(src="/img/contacts/consult.jpg", alt="image")
+                .contacts-page__form 
+                    h1.contacts-page__title У нас точно есть предложение для Вас!
+                    include chunk/form
+    include chunk/map
+
+block scripts 
+     script(src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU", type="text/javascript")

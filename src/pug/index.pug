@@ -3,6 +3,7 @@ extends layout/app
 block vars 
     - let title = 'Main';
     - let navname = "Главная";
+    - let width = "762px";
 
 block link
     link(rel="stylesheet",href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css")
@@ -41,16 +42,7 @@ block page
                     h1.consult__title Мы имеем опыт решения задач, связанных с фильтрацией и очисткой продуктов и сред на разных производствах
                     p.consult__subtitle Оставьте данные для заказа или получения консультации
                     include chunk/form
-    section.contacts
-        .container 
-            .contacts__wrapper 
-                .map(id = "map") 
-                ul.contacts-list
-                    li.contacts-list__item 
-                        a(href="index.html").contacts-logo
-                            img(src="/img/header/logo.png", alt="Logo").contacts-logo__img
-                    each item in contacts  
-                        +contacts(item.img, item.text, item.href)
+    include chunk/map
                     
                       
 
