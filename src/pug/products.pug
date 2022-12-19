@@ -1,0 +1,22 @@
+extends layout/app
+
+block vars 
+    - let title = 'Products';
+    - let navname = "Продукция";
+
+block page
+    .bread 
+        .container 
+            p.bread__name Продукция
+    section.products
+        .container 
+            aside.aside
+                ul.aside__list
+                    each item in aside 
+                        +aside(item.title,item.href,item.subtitle)
+            ul.products__list   
+
+                    
+                      
+
+
