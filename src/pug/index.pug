@@ -19,22 +19,8 @@ block page
                     ul.info-card__list
                         each item in card 
                             +card(item.title,item.text,item.img) 
-    section.geo 
-        .container
-            .geo__title.title Наша география 
-            .geo__wrapper
-                img(src="/img/geo/map.png", alt="map").geo__img
-                .geo-countries
-                    h3.geo-countries__title География производителей и поставщиков реализуемой на нашем рынке продукции представлена:
-                    ul.geo-countries__list
-                        each item in geo
-                            +geo(item.colour,item.country,item.store,item.link)
-    section.companies
-        .container 
-            .companies__title.title Нам доверяют
-            ul.companies__list
-                each item in companies
-                    +companies(item)
+    include chunk/geo
+    include chunk/companies
     section.catalog 
         .container 
             .catalog__title.title Каталог решений для Вашего производства

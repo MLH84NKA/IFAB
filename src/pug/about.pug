@@ -1,0 +1,33 @@
+extends layout/app
+
+block vars 
+    - let title = 'About';
+    - let navname = "О нас";
+
+
+block page
+    section.about 
+        .container 
+            .about__wrapper 
+                .about__info
+                    h1.about__title АО “ИФАБ Техно” – дилер в России скандинавской компании Skandinaviska IFAB Filtrering AB
+                    p.about__text.about__text--order--first  Офис ИФАБ Техно в Санкт-Петербурге организован в мае 1998 г. Головная компания занимает ведущее положение на европейском рынке и имеет более чем 30-летний опыт в области применения фильтрационных материалов.
+                    p.about__text.about__text--order--second  Мы имеем опыт решения задач, связанных с фильтрацией и очисткой продуктов и сред, на различных производствах и отраслях промышленности:
+                    ul.about__table
+                        each el in about 
+                            +about(el) 
+                    p.about__text.about__text--order--third Сотрудничая с ИФАБ Техно, Вы получите обоснованные решения по подбору фильтрующих материалов и корпусов (фильтродержателей), сертифицированных в соответствии с требованиями FDI 21CFR (пищевая промышленность).
+                .about__image 
+                    img(src="/img/about/image.jpg", alt="image").about__img
+    include chunk/geo
+    include chunk/companies
+    section.about-btns
+        .about-btns__wrapper 
+            button(type="button").about-btns__btn.about-btns__consult Получить консультацию
+            a(href="#").about-btns__link.about-btns__btn Посмотреть всю продукцию
+    
+                    
+                      
+
+
+

@@ -5,34 +5,38 @@ if (header) {
         headerLink[1].classList.add('.header-nav__item--extends');
     }
 }
-var swiper = new Swiper(".mySwiper", {
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true
-    },
-});
 
-ymaps.ready(init);
-function init() {
-    // Создание карты.
-    var myMap = new ymaps.Map("map", {
-        // Координаты центра карты.
-        // Порядок по умолчанию: «широта, долгота».
-        // Чтобы не определять координаты центра карты вручную,
-        // воспользуйтесь инструментом Определение координат.
-        center: [59.851422, 30.300983],
-
-        // Уровень масштабирования. Допустимые значения:
-        // от 0 (весь мир) до 19.
-        zoom: 13.5
+if (document.querySelector(".mySwiper")) {
+    var swiper = new Swiper(".mySwiper", {
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true
+        },
     });
-    var placemark = new ymaps.Placemark([59.851422, 30.300983], {},
-        {
-            preset: 'islands#icon',
-            iconColor: '#a40000'
-        }
-    );
-    myMap.geoObjects.add(placemark);
+}
+if (document.querySelector(".map")) {
+    ymaps.ready(init);
+    function init() {
+        // Создание карты.
+        var myMap = new ymaps.Map("map", {
+            // Координаты центра карты.
+            // Порядок по умолчанию: «широта, долгота».
+            // Чтобы не определять координаты центра карты вручную,
+            // воспользуйтесь инструментом Определение координат.
+            center: [59.851422, 30.300983],
+
+            // Уровень масштабирования. Допустимые значения:
+            // от 0 (весь мир) до 19.
+            zoom: 13.5
+        });
+        var placemark = new ymaps.Placemark([59.851422, 30.300983], {},
+            {
+                preset: 'islands#icon',
+                iconColor: '#a40000'
+            }
+        );
+        myMap.geoObjects.add(placemark);
+    }
 }
 
 // Header
@@ -41,7 +45,7 @@ let menu = document.querySelector(".menu");
 if (headerBtn) {
     headerBtn.addEventListener("click", function () {
         headerBtn.classList.toggle("header-nav__btn--active");
-        if (menu){
+        if (menu) {
             menu.classList.toggle("menu--active")
         }
     })

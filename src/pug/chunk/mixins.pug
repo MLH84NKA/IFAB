@@ -65,6 +65,9 @@ mixin menu(title, href, subtitle)
                     each item in subtitle
                         +sublist(item.name,item.href)
             //- if ((title == "Фильтрующие картоны") && (title == "Адсорбенты"))
+mixin about(name)
+    li.about__item="-" + name 
+
 
             
                 
