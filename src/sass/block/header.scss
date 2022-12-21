@@ -58,14 +58,23 @@
     &__btn{
         width: 13px;
         height: 11px;
-        background-image: url("/img/header/arrow.svg");
-        background-position: center;
-        background-repeat: no-repeat;
-        transition: all .3s linear;
-        fill: blue;
+        mask-image: url("/img/header/arrow.svg");
+        mask-position: center;
+        mask-repeat: no-repeat;
+        transition: background-color .3s linear,
+        transform .3s linear;
+        background-color: $grey;
+        &:hover{
+            background-color: $blue;
+        }
+        
     }
     &__btn--active{
         transform: rotate(180deg);
     }
 
+}
+.header-nav__item--active .header-nav__btn,
+.header-nav__item:hover .header-nav__btn{
+    background-color: $blue;
 }

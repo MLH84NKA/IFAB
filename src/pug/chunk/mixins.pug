@@ -78,7 +78,14 @@ mixin aside(title,href,subtitle)
         if (subtitle)
             ul.aside-sublist
                 each item in subtitle 
-                    +subaside(item.name,item.href) 
+                    +subaside(item.name,item.href)
+
+mixin products(name,img,link)
+    li.products-cell
+        img(src="/img/catalog/"+img, alt=img).products-cell__img
+        .products-cell__inner 
+            p.products-cell__name= name 
+            a(href=limk).products-cell__link 
             
 
 

@@ -9,12 +9,15 @@ block page
         .container 
             p.bread__name Продукция
     section.products
-        .container 
-            aside.aside
-                ul.aside__list
-                    each item in aside 
-                        +aside(item.title,item.href,item.subtitle)
-            ul.products__list   
+        .container
+            .products__wrapper 
+                aside.aside
+                    ul.aside__list
+                        each item in aside 
+                            +aside(item.title,item.href,item.subtitle)
+                ul.products__list
+                    each item in catalog
+                        +products(item.name,item.img,"#")   
 
                     
                       

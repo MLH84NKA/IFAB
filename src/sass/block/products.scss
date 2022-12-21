@@ -1,0 +1,58 @@
+.products {
+    &__wrapper {
+        display: flex;
+        column-gap: 55px;
+        margin-bottom: 100px;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 20px;
+        row-gap: 30px;
+    }
+}
+.products-cell{
+    padding: 26px;
+    font-family: 'raleway';
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 30px;
+    border: 1.28009px solid #E8E8E8;
+    height: 554px;
+    width: calc(100% / 3 - 13.5px);
+    &__img{
+        width: 353px;
+        height: 396px;
+    }
+    &__inner{
+        margin-top: 26px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__name{
+        max-width: 244px;
+    }
+    &__link{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80px;
+        height: 80px;
+        background-color: $blue;
+        transition: background-color .3s linear;
+        cursor: pointer;
+        &::before{
+            content: '';
+            display: block;
+            width: 40px;
+            height: 10px;
+            background-image: url("../img/catalog/arrow2.svg");
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        &:hover{
+            background-color: $lightblue;
+        }
+    }
+}
