@@ -69,12 +69,18 @@ mixin about(name)
     li.about__item="-" + name 
 
 mixin subaside(name,href)
-    li.aside-sublist__item 
-        a(href=href).aside-sublist__link=name
+    li.aside-sublist__item
+        if (name == asideName) 
+            a(href=href).aside-sublist__link.aside-sublist__link--active=name
+        else 
+            a(href=href).aside-sublist__link=name
 
 mixin aside(title,href,subtitle)
-    li.aside__item 
-        a(href=href).aside__link= title
+    li.aside__item
+        if (title == asideName) 
+            a(href=href).aside__link.aside__link--active= title
+        else 
+            a(href=href).aside__link= title
         if (subtitle)
             ul.aside-sublist
                 each item in subtitle 
@@ -85,7 +91,11 @@ mixin products(name,img,link)
         img(src="/img/catalog/"+img, alt=img).products-cell__img
         .products-cell__inner 
             p.products-cell__name= name 
-            a(href=limk).products-cell__link 
+            a(href=limk).products-cell__link
+
+mixin bread(name,href)
+    li.bread__item 
+        a(href=href).bread__link= name
             
 
 

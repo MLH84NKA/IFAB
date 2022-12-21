@@ -1,0 +1,16 @@
+extends layout/app
+
+block vars 
+    - let title = 'Handfilters';
+    - let navname = "Продукция";
+    - let asideName = "Рукавные фильтры"
+    - let bread = [ {"name": "Продукция","href": "products.html"},{"name":"Рукавные фильтры", "href":"handfilters.html"}];
+
+block page
+    include chunk/bread
+    section.handfilters
+        .container
+            .handfilters__wrapper 
+                include chunk/aside
+                ul.products__list
+                    

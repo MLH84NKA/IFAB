@@ -13,6 +13,9 @@
         font-weight: 700;
         margin-bottom: 20px;
     }
+    &__link--active{
+        color: $blue;
+    }
 }
 .aside-sublist{
     &__link{
@@ -23,10 +26,14 @@
         line-height: 23.5px;
         font-weight: 500;
         color: $grey;
+
         &::before{
             content: "–";
             position: absolute;
             left: -15px;
         }
     }
+    &__link--active{
+        color: $blue;
+    } 
 }

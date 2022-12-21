@@ -3,18 +3,15 @@ extends layout/app
 block vars 
     - let title = 'Products';
     - let navname = "Продукция";
+    - let bread = [ {"name": "Продукция","href": "products.html"}];
+       
 
 block page
-    .bread 
-        .container 
-            p.bread__name Продукция
+    include chunk/bread
     section.products
         .container
             .products__wrapper 
-                aside.aside
-                    ul.aside__list
-                        each item in aside 
-                            +aside(item.title,item.href,item.subtitle)
+                include chunk/aside
                 ul.products__list
                     each item in catalog
                         +products(item.name,item.img,"#")   

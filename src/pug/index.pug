@@ -27,7 +27,7 @@ block page
             .catalog__title.title Каталог решений для Вашего производства
             ul.catalog__list 
                 each item in catalog 
-                    +catalog(item.name,item.img)
+                    +catalog(item.name,item.img,item.link)
             .catalog-link        
                 a(href="/products.html").catalog__link Посмотреть всю продукцию
     section.consult 
