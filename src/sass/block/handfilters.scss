@@ -1,5 +1,103 @@
 .handfilters{
+    max-width: 1254px;
+    &__title{
+        color: $blue;
+        background-color: #F5F5F5;
+        padding: 36px 0 36px 0;
+        text-align: center;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+        font-family: 'raleway';
+        font-weight: 700;
+        font-size: 24px;
+    }
+    &__subtitle{
+        text-transform: uppercase;
+        font-family: 'raleway';
+        font-weight: 700;
+        font-size: 24px;
+        margin-bottom: 20px;
+        margin-top: 60px;
+    }
+    
+}
+.handfilters-choose{
+    margin-top: 0;
+    &__item{
+        line-height: 28px;
+        margin-bottom: 28px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+}
+.handfilters-examples{
+    line-height: 28px;
+    &__list{
+        padding-left: 25px;
+        list-style:disc;
+    }
+}
+.handfilters-specs{
+    line-height: 28px;
+    &__list{
+        padding-left: 25px;
+        list-style:disc;
+        margin-bottom: 80px;
+    }
+    
+}
+.page-catalog{
+    &__title{
+        color: $blue;
+        background-color: #F5F5F5;
+        padding: 36px 0 36px 0;
+        text-align: center;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+        font-family: 'raleway';
+        font-weight: 700;
+        font-size: 24px;
+    }
     &__wrapper{
         display: flex;
+        column-gap: 40px;
+        justify-content: center;
+        margin-bottom: 60px;
+    }
+}
+.additional-info{
+    text-align: center;
+    background-color: #F5F5F5;
+    padding: 60px 0 50px 0;
+    &__title{
+        text-transform: uppercase;
+        font-size: 24px;
+        font-family: 'raleway';
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+    &__text{
+        margin-bottom: 30px;
+    }
+    &__button{
+        display: flex;
+        justify-content: center;
+    }
+    &__btn{
+        height: 75px;
+        width: 313px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $orange;
+        color: $white;
+        transition: background-color .3s linear;
+        border-radius: 38px;
+        font-size: 20px;
+        &:hover{
+            background-color: $lightorange;
+        }
+        
     }
 }

@@ -8,9 +8,30 @@ block vars
 
 block page
     include chunk/bread
-    section.handfilters
+    section.page
         .container
-            .handfilters__wrapper 
+            .page__wrapper 
                 include chunk/aside
-                ul.products__list
+                .handfilters
+                    h1.handfilters__title= asideName
+                    h2.handfilters__subtitle.handfilters-choose Как выбрать рукавный фильтр?
+                    ul.handfilters-choose__list
+                        each item in text 
+                            li.handfilters-choose__item= item
+                    h2.handfilters__subtitle.handfilters-examples Примеры использования фильтр-сумок 
+                    ul.handfilters-examples__list
+                        each item in examples 
+                            li.handfilters-examples__item= item
+                    h2.handfilters-specs.handfilters__subtitle Фильтр-сумки производства IFAB
+                    ul.handfilters-specs__list
+                        each item in manufacture 
+                            li.handfilters-specs__item= item
+    section.page-catalog
+        .container 
+            .page-catalog__title каталог фильтр-сумок
+            ul.page-catalog__wrapper
+                each item in handfilters 
+                    +catalog(item.name, item.img)
+    include chunk/additional
+                     
                     
