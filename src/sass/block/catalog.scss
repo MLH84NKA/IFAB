@@ -61,7 +61,7 @@
         &::before{
             content: '';
             position: absolute;
-            background-image: url("/img/catalog/arrow.svg");
+            background-image: url("../img/catalog/arrow.svg");
             width: 28px;
             height: 12px;
             transform: translateX(-50%) translateY(-50%);

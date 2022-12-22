@@ -27,11 +27,11 @@ mixin geo(colour,country,store,link="")
 
 mixin companies(img)
     li.companies__item 
-        img(src="/img/companies/"+img, alt=img).companies__img
+        img(src="img/companies/"+img, alt=img).companies__img
 
 mixin catalog(name,img,link="")
     li.catalog-cell
-        img(src="/img/catalog/"+img , alt=img)
+        img(src="img/catalog/"+img , alt=img)
         .catalog-cell__inner 
             p.catalog-cell__name= name 
             a(href= link).catalog-cell__link 
@@ -88,7 +88,7 @@ mixin aside(title,href,subtitle)
 
 mixin products(name,img,link)
     li.products-cell
-        img(src="/img/catalog/"+img, alt=img).products-cell__img
+        img(src="img/catalog/"+img, alt=img).products-cell__img
         .products-cell__inner 
             p.products-cell__name= name 
             a(href=link).products-cell__link
