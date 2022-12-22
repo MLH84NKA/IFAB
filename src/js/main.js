@@ -29,12 +29,14 @@ if (document.querySelector(".map")) {
             // от 0 (весь мир) до 19.
             zoom: 13.5
         });
+        
         var placemark = new ymaps.Placemark([59.851422, 30.300983], {},
             {
                 preset: 'islands#icon',
                 iconColor: '#a40000'
             }
         );
+        myMap.behaviors.disable('scrollZoom');
         myMap.geoObjects.add(placemark);
     }
 }
