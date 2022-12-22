@@ -34,7 +34,7 @@ mixin catalog(name,img,link="")
         img(src="/img/catalog/"+img , alt=img)
         .catalog-cell__inner 
             p.catalog-cell__name= name 
-            a(href=link).catalog-cell__link 
+            a(href= link).catalog-cell__link 
 
 mixin slide(title,img)
     .swiper-slide

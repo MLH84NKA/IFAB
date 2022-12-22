@@ -31,7 +31,7 @@ block page
             .page-catalog__title каталог фильтр-сумок
             ul.page-catalog__wrapper
                 each item in handfilters 
-                    +catalog(item.name, item.img)
+                    +catalog(item.name, item.img, item.link)
     include chunk/additional
                      
                     

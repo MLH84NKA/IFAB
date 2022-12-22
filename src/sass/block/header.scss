@@ -23,6 +23,11 @@
     &__logo{
         max-height: 92px;
     }
+    &__nav{
+        @include w1280{
+            display: none;
+        }
+    }
     
 }
 .header-nav{
@@ -72,6 +77,7 @@
     &__btn--active{
         transform: rotate(180deg);
     }
+    
 
 }
 .header-nav__item--active .header-nav__btn,

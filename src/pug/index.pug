@@ -10,39 +10,39 @@ block link
     
 
 block page
-    section.info
-        .container 
-            .info__wrapper 
-                h1.info__title Передовые технологии промышленной фильтрации
-                p.info__text С 1960 года IFAB поставляет комплексные решения фильтрации для разных отраслей по всему миру
-                button(type="button").info__btn Получить консультацию
-                .info-card 
-                    ul.info-card__list
-                        each item in card 
-                            +card(item.title,item.text,item.img) 
-    include chunk/geo
-    include chunk/companies
-    section.catalog 
-        .container 
-            .catalog__title.title Каталог решений для Вашего производства
-            ul.catalog__list 
-                each item in catalog 
-                    +catalog(item.name,item.img,item.link)
-            .catalog-link        
-                a(href="/products.html").catalog__link Посмотреть всю продукцию
-    section.consult 
-        .container
-            .consult__wrapper 
-                .swiper.mySwiper 
-                    .swiper-wrapper
-                        each item in consult 
-                            +slide(item.title,item.img)
-                    .swiper-pagination 
-                .consult__form 
-                    h1.consult__title Мы имеем опыт решения задач, связанных с фильтрацией и очисткой продуктов и сред на разных производствах
-                    p.consult__subtitle Оставьте данные для заказа или получения консультации
-                    include chunk/form
-    include chunk/map
+    //- section.info
+    //-     .container 
+    //-         .info__wrapper 
+    //-             h1.info__title Передовые технологии промышленной фильтрации
+    //-             p.info__text С 1960 года IFAB поставляет комплексные решения фильтрации для разных отраслей по всему миру
+    //-             button(type="button").info__btn Получить консультацию
+    //-             .info-card 
+    //-                 ul.info-card__list
+    //-                     each item in card 
+    //-                         +card(item.title,item.text,item.img) 
+    //- include chunk/geo
+    //- include chunk/companies
+    //- section.catalog 
+    //-     .container 
+    //-         .catalog__title.title Каталог решений для Вашего производства
+    //-         ul.catalog__list 
+    //-             each item in catalog 
+    //-                 +catalog(item.name,item.img,item.link)
+    //-         .catalog-link        
+    //-             a(href="/products.html").catalog__link Посмотреть всю продукцию
+    //- section.consult 
+    //-     .container
+    //-         .consult__wrapper 
+    //-             .swiper.mySwiper 
+    //-                 .swiper-wrapper
+    //-                     each item in consult 
+    //-                         +slide(item.title,item.img)
+    //-                 .swiper-pagination 
+    //-             .consult__form 
+    //-                 h1.consult__title Мы имеем опыт решения задач, связанных с фильтрацией и очисткой продуктов и сред на разных производствах
+    //-                 p.consult__subtitle Оставьте данные для заказа или получения консультации
+    //-                 include chunk/form
+    //- include chunk/map
                     
                       
 

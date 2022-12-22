@@ -52,6 +52,15 @@ if (headerBtn) {
         }
     })
 };
+// Adaptive
+
+let burger = document.querySelector('.burger__icon');
+if(burger){
+    let headerNav = document.querySelector('.header__nav');
+    burger.addEventListener('click', function(e){
+        burger.classList.toggle('burger__icon--active')
+    })
+}
 
 
 
