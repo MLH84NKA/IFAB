@@ -11,7 +11,7 @@ mixin nav(name,link)
                 button(type="button").header-nav__btn
 
 mixin card(title,text,img)
-    li(style="background-image: url(../img/info/" + img + ");").info-card__item
+    li(style="background-image: url(img/info/" + img + ");").info-card__item
         h2.info-card__title= title 
         p.info-card__text= text
         .info-card__back
@@ -38,7 +38,7 @@ mixin catalog(name,img,link="")
 
 mixin slide(title,img)
     .swiper-slide
-        div(style="background-image: url('../img/consult/"+img+"');").swiper-slide__background
+        div(style="background-image: url('img/consult/"+img+"');").swiper-slide__background
             .swiper-slide__gradient
             if (img == '5.png') 
                 h2(style="margin-bottom:39px;").swiper-slide__title= title
