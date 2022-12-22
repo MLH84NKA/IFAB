@@ -96,6 +96,26 @@ mixin products(name,img,link)
 mixin bread(name,href)
     li.bread__item 
         a(href=href).bread__link= name
+
+mixin singleLayer(name,img,desc,link,table)
+    li.single-layer-cell
+        img(src="img/singlelayers/"+ img, alt=img).single-layer-cell__img
+        .single-layer-cell__inner 
+            .single-layer-cell__name= name 
+            .single-layer-cell__description= desc 
+            a(href=link).single-layer-cell__link
+                p.single-layer-cell__pdf Посмотреть pdf-каталог
+            p.single-layer-cell__info Техничекая информация:
+            ul.single-layer-cell__table
+                each item in table 
+                    +table(item.title,item.value)
+
+mixin table(title,value)
+    li.table-cell
+        .table-cell__title= title 
+        .table-cell__value= value 
+
+
             
 
 

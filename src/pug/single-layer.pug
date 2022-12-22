@@ -1,0 +1,22 @@
+extends layout/app
+
+block vars 
+    - let title = 'Handfilters';
+    - let navname = "Продукция";
+    - let asideName = "Однослойные"
+    - let bread = [ {"name": "Продукция","href": "products.html"},{"name":"Рукавные фильтры", "href":"handfilters.html"},{"name":"Однослойные","href":"single-layer.html"}];
+
+block page
+    include chunk/bread
+    section.page
+        .container
+            .page__wrapper 
+                include chunk/aside
+                .production-cells
+                    h1.production-cells__title Однослойные рукавные фильтры
+                    ul.production-cells__list
+                        each item in singleLayers 
+                            +singleLayer(item.name,item.img,item.description,item.link,item.table) 
+
+                    
+    include chunk/additional
