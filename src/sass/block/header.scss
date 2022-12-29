@@ -41,7 +41,7 @@
             color: $blue;
             
             font-weight: 500;
-            border-color: rgba(0, 75, 169, 1);
+            // border-color: rgba(0, 75, 169, 0);
         }
     }
     &__item--active{
@@ -61,8 +61,8 @@
     }
   
     &__btn{
-        width: 13px;
-        height: 11px;
+        width: 15px;
+        height: 14px;
         mask-image: url("../img/header/arrow.svg");
         mask-position: center;
         mask-repeat: no-repeat;
@@ -72,6 +72,7 @@
         &:hover{
             background-color: $blue;
         }
+        vertical-align: center;
         
     }
     &__btn--active{

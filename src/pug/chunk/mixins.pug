@@ -31,10 +31,12 @@ mixin companies(img)
 
 mixin catalog(name,img,link="")
     li.catalog-cell
-        img(src="img/catalog/"+img , alt=img)
-        .catalog-cell__inner 
-            p.catalog-cell__name= name 
-            a(href= link).catalog-cell__link 
+        a(href= link).catalog-cell__href
+            .catalog-cell__img
+                img(src="img/catalog/"+img , alt=img)
+            .catalog-cell__inner 
+                p.catalog-cell__name= name 
+                a(href= link).catalog-cell__link 
 
 mixin slide(title,img)
     .swiper-slide
@@ -60,10 +62,10 @@ mixin sublist(name, href)
 mixin menu(title, href, subtitle)
     li.menu__item
         a(href=href).menu__link= title 
-            if (subtitle)
-                ul.menu-sublist
-                    each item in subtitle
-                        +sublist(item.name,item.href)
+        if (subtitle)
+            ul.menu-sublist
+                each item in subtitle
+                    +sublist(item.name,item.href)
             //- if ((title == "Фильтрующие картоны") && (title == "Адсорбенты"))
 mixin about(name)
     li.about__item="-" + name 
@@ -88,10 +90,12 @@ mixin aside(title,href,subtitle)
 
 mixin products(name,img,link)
     li.products-cell
-        img(src="img/catalog/"+img, alt=img).products-cell__img
-        .products-cell__inner 
-            p.products-cell__name= name 
-            a(href=link).products-cell__link
+        a(href=link)
+            .products-cell__image 
+                img(src="img/catalog/"+img, alt=img).products-cell__img
+            .products-cell__inner 
+                p.products-cell__name= name 
+                a(href=link).products-cell__link
 
 mixin bread(name,href)
     li.bread__item 

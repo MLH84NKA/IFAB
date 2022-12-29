@@ -1,3 +1,14 @@
+input:focus{
+    &::placeholder{
+        opacity: 0;
+    }
+}
+
+textarea:focus{
+    &::placeholder{
+        opacity: 0;
+    }
+}
 .form{
     display: flex;
     flex-direction: column;
@@ -8,7 +19,7 @@
         padding: 25px 37px 24px 37px;
         background-color: #FAFAFA;
         border: 1px solid #E6E6E6;
-        color: #848484;
+        // color: #848484;
         font-family: 'ptsans';
         font-size: 24px;
         line-height: 108.19%;
@@ -55,4 +66,10 @@
         color: inherit;
         text-decoration: underline;
     }
+}
+input{
+    color: $blue;
+}
+textarea{
+    color: $blue;
 }

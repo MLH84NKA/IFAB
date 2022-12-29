@@ -1,15 +1,24 @@
+.about img{
+    width: 100%;
+            display: block;
+}
 .about{
     width: 100%;
     background-color: #F8F8F8;
     &__wrapper{
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        // align-items: center;
     }
     &__info{
-        max-width: 771px;
+        padding-right: 20px;
+        padding-top: 100px;
+        max-width: 791px;
+        padding-bottom: 20px;
     }
     &__image{
+        max-width: 950px;
+        display: block;
         margin-right: -110px;
         margin-bottom: -5px;
     }

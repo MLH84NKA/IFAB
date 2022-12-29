@@ -12,6 +12,11 @@
         font-family: 'raleway';
         font-weight: 700;
         margin-bottom: 20px;
+        transition: color .3s linear;
+
+        &:hover{
+            color: $blue;
+        }
     }
     &__link--active{
         color: $blue;
@@ -26,7 +31,10 @@
         line-height: 23.5px;
         font-weight: 500;
         color: $grey;
-
+        transition: color .3s linear;
+        &:hover{
+            color: $lightblue;
+        }
         &::before{
             content: "–";
             position: absolute;

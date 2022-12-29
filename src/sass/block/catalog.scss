@@ -32,12 +32,14 @@
 .catalog-link{
     display: flex;
     justify-content: center;
-    align-items: center;
+    // align-items: center;
+}
+.catalog-cell img{
+    display: block;
 }
 .catalog-cell{
     border: 1px solid $lightgrey;
     padding: 20px;
-    height: 432px;
     &__inner{
         display: flex;
         justify-content: space-between;

@@ -19,11 +19,11 @@
     font-size: 25px;
     line-height: 30px;
     border: 1.28009px solid #E8E8E8;
-    height: 554px;
+    // height: 554px;
     width: calc(100% / 3 - 13.5px);
     &__img{
         width: 353px;
-        height: 396px;
+        display: block;
     }
     &__inner{
         margin-top: 26px;

@@ -29,15 +29,33 @@ if (document.querySelector(".map")) {
             // от 0 (весь мир) до 19.
             zoom: 13.5
         });
-        
+
         var placemark = new ymaps.Placemark([59.851422, 30.300983], {},
             {
                 preset: 'islands#icon',
                 iconColor: '#a40000'
             }
         );
+        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+            '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+        ),
+        myPlacemark = new ymaps.Placemark([59.851422, 30.300983], {
+            hintContent: 'IFAB',
+            balloonContent: 'г. Санкт-Петербург, а/я 281 Ленинский пр., 151, оф.635'
+        }, {
+            // Опции.
+            // Необходимо указать данный тип макета.
+            iconLayout: 'default#image',
+            // Своё изображение иконки метки.
+            iconImageHref: '../img/contacts/address.svg',
+            // Размеры метки.
+            iconImageSize: [30, 42],
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            iconImageOffset: [-5, -38]
+        }),
         myMap.behaviors.disable('scrollZoom');
-        myMap.geoObjects.add(placemark);
+        myMap.geoObjects.add(myPlacemark);
     }
 }
 
@@ -52,12 +70,27 @@ if (headerBtn) {
         }
     })
 };
+
+// phone mask
+var phone = document.querySelector('.form__phone')
+if (phone) {
+    let maskOptions = {
+        mask: '+7(000)000-00-00',
+        lazy: false
+    }
+    phone.addEventListener("focus",function (){
+        let mask = new IMask(phone, maskOptions);
+
+    })
+}
+
+
 // Adaptive
 
 let burger = document.querySelector('.burger__icon');
-if(burger){
+if (burger) {
     let headerNav = document.querySelector('.header__nav');
-    burger.addEventListener('click', function(e){
+    burger.addEventListener('click', function (e) {
         burger.classList.toggle('burger__icon--active')
     })
 }

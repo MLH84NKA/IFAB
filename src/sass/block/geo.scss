@@ -6,15 +6,22 @@
 
     &__wrapper {
         display: flex;
-        justify-content: space-between;
+        // justify-content: space-between;
+        column-gap: 162px;
     }
     &__img{
-        max-height: 395px;
+        width: 100%;
+        height: auto;
+        display: block;
+
+    }
+    &__image{
+        max-width: 688px;
     }
 }
 
 .geo-countries {
-    padding-right: 190px;
+    // padding-right: 190px;
     padding-left: 10px;
     &__list {
         display: flex;
@@ -36,6 +43,7 @@
     }
     &__text{
         line-height: 108%;
+        max-width: 638px;
     }
     &__link{
         text-decoration: underline;

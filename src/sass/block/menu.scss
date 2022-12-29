@@ -1,18 +1,23 @@
+.header__container{
+    position: relative;
+}
 .menu{
-    opacity: 0;
+    opacity: 1;
     border-top: 6px solid $blue;
     position: absolute;
     z-index: 1;
     bottom: 0;
-    right: calc(50% - 130px);
+    right: 20px;
     background-color: $white;
     text-transform: uppercase;
-    transform: translateX(50%);
     transition: all .3s linear;
+    max-width: 1428px;
+    width: 100%;
     &__wrapper{
         padding: 36px 60px 40px 60px;
-        width: 1428px;
-        height: 270px;
+        
+        
+        // height: 270px;
     }
     &__list{
         display: flex;
@@ -25,11 +30,15 @@
         font-family: 'raleway';
         font-weight: 700;
         font-size: 20px;
+        transition: color .3s linear;
 
+        &:hover{
+            color: $blue;
+        }
     }
 }
 .menu--active{
-    bottom: -275px;
+    bottom: -100%;
     opacity: 1;
 }
 .menu-sublist{
@@ -40,5 +49,10 @@
         max-width: 227px;
         font-weight: 500;
         line-height: 108%;
+        transition: color .3s linear;
+
+        &:hover{
+            color: $lightblue;
+        }
     }
 }
