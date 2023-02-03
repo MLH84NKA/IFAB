@@ -13,6 +13,9 @@
         line-height: 115%;
         margin-bottom: 25px;
         max-width: 830px;
+        @include breakpoint(sm){
+            font-size: 32px;
+        }
     }
     &__text{
         color: $black;
@@ -34,12 +37,18 @@
         &:hover{
             background-color: $lightorange;
         }
+        &:focus{
+            background-color: $deeporange;
+        }
     }
 }
 .info-card{
     &__list{
         display: flex;
         justify-content: space-between;
+        row-gap: 20px;
+        column-gap: 20px;
+        flex-wrap: wrap;
         // align-items: center;
         
     }
@@ -51,7 +60,8 @@
         // background-color: $blue;
         padding: 25px;
         color: $white;
-        width: 402px;
+        max-width: 402px;
+        width: 100%;
     }
     &__title{
         position: relative;

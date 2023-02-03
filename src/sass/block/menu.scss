@@ -1,13 +1,12 @@
-.header__container{
-    position: relative;
-}
+
 .menu{
     opacity: 1;
     border-top: 6px solid $blue;
     position: absolute;
     z-index: 1;
-    bottom: 0;
-    right: 20px;
+    top: 0;
+    right: 0px;
+    transform: translateY(-100%);
     background-color: $white;
     text-transform: uppercase;
     transition: all .3s linear;
@@ -21,10 +20,12 @@
     }
     &__list{
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         height: 100%;
     }
     &__link{
+        min-width: 270px;
         display: block;
         margin-bottom: 20px;
         font-family: 'raleway';
@@ -38,7 +39,8 @@
     }
 }
 .menu--active{
-    bottom: -100%;
+    top: 100%;
+    transform: translateY(0);
     opacity: 1;
 }
 .menu-sublist{

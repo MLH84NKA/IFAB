@@ -3,11 +3,14 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        
+        gap: 20px;
+        @include breakpoint (xll){
+            flex-direction: column-reverse;
+        }
     }
 }
 .contacts-list{
-    padding-right: 90px;
+    // padding-right: 90px;
     &__item{
         margin-bottom: 30px;
         &:last-child{

@@ -6,4 +6,43 @@ $blue: #004BA9;
 $lightblue: #1871E0;
 $orange: #F87933;
 $lightorange: #FF8B37;
+$deeporange: #FF640E;
 $info: #F0F4FF;
+
+@mixin breakpoint($point){
+    @if $point == xxl{
+        @media(max-width: 1716px){
+            @content;
+        }
+    }
+    @else if $point == xll{
+        @media(max-width: 1436px){
+            @content;
+        }
+    }
+    @else if $point == xl{
+        @media(max-width: 1256px){
+            @content;
+        }
+    }
+    @else if $point == lg{
+        @media(max-width: 992px){
+            @content;
+        }
+    }
+    @else if $point == md{
+        @media(max-width: 768px){
+            @content;
+        }
+    }
+    @else if $point == sm{
+        @media(max-width: 576px){
+            @content;
+        }
+    }
+    @else if $point == xs{
+        @media(max-width: 375px){
+            @content;
+        }
+    }
+}

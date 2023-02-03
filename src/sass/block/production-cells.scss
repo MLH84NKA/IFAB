@@ -35,9 +35,10 @@
         margin-bottom: 30px;
     }
     &__link{
+        padding: 0 25px;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
         text-decoration: underline;
         font-size: 18px;
         line-height: 139%;
@@ -47,7 +48,24 @@
         max-width: 318px;
         height: 45px;
         color: $white;
-
+        &::before{
+            content: '';
+            display: block;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 27px;
+            height: 27px;
+            background-image: url('../img/singlelayers/pdf.png');
+        }
+        &::after{
+            content: '';
+            display: block;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 34px;
+            height: 18px;
+            background-image: url('../img/singlelayers/arrow.svg');
+        }
         
     }
     &__pdf{

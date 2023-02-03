@@ -54,5 +54,8 @@
         &:hover{
             background-color: $lightblue;
         }
+        &:focus{
+            background-color: $blue;
+        }
     }
 }

@@ -50,6 +50,9 @@ textarea:focus{
         &:hover{
             background-color: $lightorange;
         }
+        &:focus{
+            background-color: $deeporange;
+        }
     }
     &__inner{
         display: flex;

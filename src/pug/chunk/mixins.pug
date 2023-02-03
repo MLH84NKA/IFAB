@@ -107,8 +107,9 @@ mixin singleLayer(name,img,desc,link,table)
         .single-layer-cell__inner 
             .single-layer-cell__name= name 
             .single-layer-cell__description= desc 
-            a(href=link).single-layer-cell__link
-                p.single-layer-cell__pdf Посмотреть pdf-каталог
+            //- a(href=link).single-layer-cell__link
+            //-     p.single-layer-cell__pdf Посмотреть pdf-каталог
+            a(href=link).single-layer-cell__link Посмотреть pdf-каталог
             p.single-layer-cell__info Техничекая информация:
             ul.single-layer-cell__table
                 each item in table 

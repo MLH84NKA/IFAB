@@ -86,6 +86,11 @@
             color: $white;
             border-color: $lightorange;
         }
+        &:focus{
+            background-color: $deeporange;
+            color: $white;
+            border-color: $deeporange;
+        }
     }
     &__link{
         color: $orange;
@@ -96,4 +101,21 @@
         color: $white;
         background-color: $orange;
     }
+}
+.about p{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 30px;
+}
+.about p:last-child{
+    max-width: 687px;
+}
+.about h1{
+    color: $blue;
+    font-size: 56px;
+    font-family: 'raleway';
+    font-weight: 700;
+    line-height: 60.5px;
+    margin-bottom: 30px;
 }

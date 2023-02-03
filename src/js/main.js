@@ -12,10 +12,15 @@ if (document.querySelector(".mySwiper")) {
             el: ".swiper-pagination",
             clickable: true
         },
+        autoHeight: true,
+        // autoplay: {
+        //     delay: 3000,
+        // },
     });
 }
+
 if (document.querySelector(".map")) {
-    ymaps.ready(init);
+    // ymaps.ready(init);
     function init() {
         // Создание карты.
         var myMap = new ymaps.Map("map", {
@@ -93,6 +98,36 @@ if (burger) {
     burger.addEventListener('click', function (e) {
         burger.classList.toggle('burger__icon--active')
     })
+}
+
+// Lazy load
+if (document.querySelector(".map__wrapper")){
+var iObserver = new IntersectionObserver(function(entries) {
+	if (entries[0].isIntersecting === true) {
+		loadMap();
+		iObserver.unobserve(entries[0].target); // перестаём отслеживать видимость
+	}
+}, {threshold: [0]}); // от 0 до 1, % видимой части элемента на экране
+
+iObserver.observe(document.getElementById('map'));
+
+function loadMap () {
+	let map = document.getElementById('map');
+	if (!map.classList.contains("js--loaded")) {
+		map.classList.add("'js--loaded");
+	
+		if (typeof ymaps === "undefined") {
+			let js = document.createElement('script');
+			js.src = "https://api-maps.yandex.ru/2.1/?lang=ru_RU";
+			document.getElementsByTagName('head')[0].appendChild(js);
+			js.onload = function() {
+				ymaps.ready(init);
+			};
+		} else {
+			ymaps.ready(init);
+		}
+	}
+}
 }
 
 
