@@ -5,6 +5,7 @@
         align-items: center;
         margin-bottom: 170px;
         margin-top: 60px;
+        row-gap: 40px;
     }
     &__title{
         margin: 0 auto;
@@ -15,8 +16,26 @@
         font-size: 56px;
         text-align: center;
         margin-bottom: 55px;
+        @include breakpoint(xl){
+            font-size: 48px;
+        }
+        @include breakpoint(md){
+            font-size: 32px;
+        }
+    }
+    &__image img{
+        display: block;
+        width: 100%;
+    }
+    &__image{
+        max-width: 632px;
+        width: 100%;
+        @include breakpoint(lg){
+            display: none;
+        }
     }
     &__form{
-        width: 972px;
+        max-width: 972px;
+        width: 100%;
     }
 }
