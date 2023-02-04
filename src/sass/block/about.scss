@@ -9,18 +9,46 @@
         display: flex;
         justify-content: space-between;
         // align-items: center;
+        @include breakpoint(img){
+            align-items: center;
+        }
     }
     &__info{
         padding-right: 20px;
         padding-top: 100px;
         max-width: 791px;
         padding-bottom: 20px;
+        @include breakpoint(img){
+            width: calc(50% - 10px);
+        }
+        @include breakpoint(lg){
+            max-width: 100%;
+            width: 100%;
+            text-align: center;
+            padding-right: 0;
+            padding-top: 40px;
+        }
+    }
+    &__inner{
+        @include breakpoint(img){
+            display: flex;
+            justify-content:space-around;
+        }
+    }
+    &__item{
+        text-align: start;
     }
     &__image{
         max-width: 950px;
         display: block;
         margin-right: -110px;
-        margin-bottom: -5px;
+        @include breakpoint(img){
+            margin-right: 0;
+            width: calc(50% - 10px);
+        }
+        @include breakpoint(lg){
+            display: none;
+        }
     }
     &__title{
         color: $blue;
@@ -29,6 +57,7 @@
         font-weight: 700;
         line-height: 60.5px;
         margin-bottom: 30px;
+        
     }
     &__text{
         font-weight: 400;
@@ -41,9 +70,15 @@
     &__text--order--second{
         margin-bottom: 50px;
         max-width: 720px;
+        @include breakpoint(img){
+            max-width: 100%;
+        }
     }
     &__text--order--third{
         max-width: 687px;
+        @include breakpoint(img){
+            max-width: 100%;
+        }
     }
     &__table{
         margin-bottom: 50px;
@@ -54,6 +89,9 @@
         border: 1px $lightgrey solid;
         grid-column-gap: 69px;
         grid-row-gap: 16px;
+        @include breakpoint(sm){
+            grid-template-columns: 1fr;
+        }
     }
 
 }
@@ -61,16 +99,23 @@
     padding: 80px 0px 100px 0px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    
+    
     
     &__wrapper{
-        width: 691px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        column-gap: 24px;
+        @include breakpoint(md){
+            flex-direction: column;
+            row-gap: 24px;
+            align-items: center;
+        }
 
     }
     &__btn{
+        max-width: 375px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -91,6 +136,9 @@
             color: $white;
             border-color: $deeporange;
         }
+        @include breakpoint(md){
+            font-size: 16px;
+        }
     }
     &__link{
         color: $orange;
@@ -110,6 +158,9 @@
 }
 .about p:last-child{
     max-width: 687px;
+    @include breakpoint(img){
+        max-width: 100%;
+    }
 }
 .about h1{
     color: $blue;
@@ -118,4 +169,12 @@
     font-weight: 700;
     line-height: 60.5px;
     margin-bottom: 30px;
+    @include breakpoint(xl){
+        font-size: 48px;
+        line-height: 52px;
+    }
+    @include breakpoint(sm){
+        font-size: 32px;
+        line-height: 38px;
+    }
 }
