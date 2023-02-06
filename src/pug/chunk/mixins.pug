@@ -1,14 +1,22 @@
 mixin nav(name,link)
     if (name == navname)
-        li.header-nav__item.header-nav__item--active
-            a(href= link).header-nav__link= name
-            if name == "Продукция"
+        if name == "Продукция"
+            li.header-nav__item.header-nav__item--active
+                a(href= link).header-nav__link= name
                 button(type="button").header-nav__btn
+            include menu
+        else 
+             li.header-nav__item.header-nav__item--active
+                a(href= link).header-nav__link= name
     else
-        li.header-nav__item 
-            a(href= link).header-nav__link= name
-            if name == "Продукция"
+        if name == "Продукция"
+            li.header-nav__item 
+                a(href= link).header-nav__link= name
                 button(type="button").header-nav__btn
+            include menu
+        else 
+            li.header-nav__item 
+                a(href= link).header-nav__link= name
 
 mixin card(title,text,img)
     li(style="background-image: url(img/info/" + img + ");").info-card__item

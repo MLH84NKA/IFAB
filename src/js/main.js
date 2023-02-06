@@ -65,6 +65,7 @@ if (document.querySelector(".map")) {
 }
 
 // Header
+let headerNav = document.querySelector('.header__nav');
 let headerBtn = document.querySelector(".header-nav__btn");
 let menu = document.querySelector(".menu");
 if (headerBtn) {
@@ -72,7 +73,9 @@ if (headerBtn) {
         headerBtn.classList.toggle("header-nav__btn--active");
         if (menu) {
             menu.classList.toggle("menu--active")
+            
         }
+        headerNav.classList.toggle("header__nav--active--2");
     })
 };
 
@@ -91,12 +94,15 @@ if (phone) {
 
 
 // Adaptive
+let body = document.querySelector('body');
 
 let burger = document.querySelector('.burger__icon');
 if (burger) {
     let headerNav = document.querySelector('.header__nav');
     burger.addEventListener('click', function (e) {
-        burger.classList.toggle('burger__icon--active')
+        burger.classList.toggle('burger__icon--active');
+        headerNav.classList.toggle("header__nav--active");
+        body.classList.toggle("body-overflow");
     })
 }
 
