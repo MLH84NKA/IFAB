@@ -54,9 +54,11 @@
         
     }
     &__nav--active--2{
+        @include w1280{
         min-height: 400px;
         height: 100%;
         overflow: auto;
+        }
     }
     
 }
