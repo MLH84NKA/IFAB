@@ -30,3 +30,8 @@
     }
 
 }
+.contacts-logo__img{
+    @include breakpoint(xs){
+        max-width: 200px;
+    }
+}

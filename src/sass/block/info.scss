@@ -26,7 +26,8 @@
     }
     &__btn{
         background-color: $orange;
-        width: 313px;
+        max-width: 313px;
+        width: 100%;
         height: 75px;
         display: flex;
         justify-content: center;
@@ -39,6 +40,9 @@
         }
         &:focus{
             background-color: $deeporange;
+        }
+        @include breakpoint(xs){
+            font-size: 16px;
         }
     }
 }

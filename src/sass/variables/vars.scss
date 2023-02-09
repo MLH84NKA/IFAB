@@ -50,4 +50,8 @@ $info: #F0F4FF;
             @content;
         }
     }
+    @else if $point == xxs{
+        @media(max-width: 320px)
+        {@content;}
+    }
 }
