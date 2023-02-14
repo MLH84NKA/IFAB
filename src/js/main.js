@@ -2,7 +2,7 @@ let header = document.querySelector(".header");
 if (header) {
     headerLink = header.querySelectorAll(".header-nav__item");
     if (headerLink.length > 1) {
-        headerLink[1].classList.add('.header-nav__item--extends');
+        headerLink[1].classList.add('header-nav__item--extends');
     }
 }
 
@@ -52,7 +52,7 @@ if (document.querySelector(".map")) {
             // Необходимо указать данный тип макета.
             iconLayout: 'default#image',
             // Своё изображение иконки метки.
-            iconImageHref: '../img/contacts/address.svg',
+            iconImageHref: '/img/contacts/address.svg',
             // Размеры метки.
             iconImageSize: [30, 42],
             // Смещение левого верхнего угла иконки относительно
@@ -68,6 +68,7 @@ if (document.querySelector(".map")) {
 let headerNav = document.querySelector('.header__nav');
 let headerBtn = document.querySelector(".header-nav__btn");
 let menu = document.querySelector(".menu");
+let body = document.querySelector("body");
 if (headerBtn) {
     headerBtn.addEventListener("click", function () {
         headerBtn.classList.toggle("header-nav__btn--active");
@@ -88,13 +89,12 @@ if (phone) {
     }
     phone.addEventListener("focus",function (){
         let mask = new IMask(phone, maskOptions);
-
     })
 }
 
 
 // Adaptive
-let body = document.querySelector('body');
+// let body = document.querySelector('body');
 
 let burger = document.querySelector('.burger__icon');
 if (burger) {

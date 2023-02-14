@@ -1,6 +1,7 @@
 .products {
     &__wrapper {
         display: flex;
+        align-items: flex-start;
         column-gap: 55px;
         margin-bottom: 100px;
     }
@@ -11,6 +12,9 @@
         column-gap: 20px;
         row-gap: 30px;
     }
+    &__inner{
+        width: 100%;
+    }
 }
 .products-cell{
     padding: 26px;
@@ -18,7 +22,7 @@
     font-weight: 700;
     font-size: 25px;
     line-height: 30px;
-    border: 1.28009px solid #E8E8E8;
+    border: 1px solid #E8E8E8;
     // height: 554px;
     width: calc(100% / 3 - 13.5px);
     @include breakpoint(xll){

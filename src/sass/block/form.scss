@@ -26,15 +26,22 @@ textarea:focus{
         line-height: 108.19%;
         height: 75px;
     }
+    &__text::placeholder{
+        color: #848484;
+    }
     &__textarea{
         padding: 25px 35px 24px 35px;
         width: 100%;
         resize: none;
         height: 165px;
+
+    }
+    &__textarea::placeholder{
+        color: #848484;
     }
     &__submit{
         margin-top: 15px;
-        max-width: 368px;
+        max-width: 398px;
         width: 100%;
         @include breakpoint(xs){
             font-size: 16px;

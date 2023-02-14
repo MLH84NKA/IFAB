@@ -7,7 +7,7 @@
         display: none;
     }
     opacity: 1;
-    border-top: 6px solid $blue;
+    border-top: 4px solid $blue;
     position: absolute;
     z-index: 0;
     top: 0;
@@ -46,6 +46,9 @@
             color: $blue;
         }
     }
+    &__link--active{
+        color: $blue;
+    }
 }
 .menu--active{
     top: 122%;
@@ -58,17 +61,26 @@
     }
 }
 .menu-sublist{
+    &__item{
+        margin-bottom: 20px;
+    }
+    &__item:last-child{
+        margin-bottom: 0px;
+    }
     &__link{
         display: block;
         color: $grey;
-        margin-bottom: 20px;
+        
         max-width: 227px;
         font-weight: 500;
         line-height: 108%;
         transition: color .3s linear;
-
+        font-family: 'raleway';
         &:hover{
             color: $lightblue;
         }
+    }
+    &__link--active{
+        color: $blue;
     }
 }

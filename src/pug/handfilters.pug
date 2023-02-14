@@ -12,20 +12,20 @@ block page
         .container
             .page__wrapper 
                 include chunk/aside
-                .handfilters
-                    h1.handfilters__title= asideName
-                    h2.handfilters__subtitle.handfilters-choose Как выбрать рукавный фильтр?
-                    ul.handfilters-choose__list
+                .pattern
+                    h1.pattern__title= asideName
+                    h2.pattern__subtitle.pattern-choose Как выбрать рукавный фильтр?
+                    ul.pattern-choose__list
                         each item in text 
-                            li.handfilters-choose__item= item
-                    h2.handfilters__subtitle.handfilters-examples Примеры использования фильтр-сумок 
-                    ul.handfilters-examples__list
+                            li.pattern-choose__item= item
+                    h2.pattern__subtitle.pattern-examples Примеры использования фильтр-сумок 
+                    ul.pattern-examples__list
                         each item in examples 
-                            li.handfilters-examples__item= item
-                    h2.handfilters-specs.handfilters__subtitle Фильтр-сумки производства IFAB
-                    ul.handfilters-specs__list
+                            li.pattern-examples__item= item
+                    h2.pattern-specs.pattern__subtitle Фильтр-сумки производства IFAB
+                    ul.pattern-specs__list
                         each item in manufacture 
-                            li.handfilters-specs__item= item
+                            li.pattern-specs__item= item
     section.page-catalog
         .container 
             .page-catalog__title каталог фильтр-сумок

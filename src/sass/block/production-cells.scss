@@ -21,7 +21,7 @@
         margin-bottom: 60px;
     }
     &__inner{
-        width: 67.75%;
+        width: 100%;
         @include breakpoint(xl){
             width: auto;
         }
@@ -33,6 +33,7 @@
     &__image{
         max-width: 405px;
         width: 100%;
+        // flex-shrink: 0;
         @include breakpoint(xl){
             display: none;
         }

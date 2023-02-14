@@ -80,6 +80,7 @@
 }
 .header-nav{
     display: flex;
+    align-items: center;
     column-gap: 80px;
     @include w1280{
         display: block;
@@ -117,6 +118,15 @@
             font-weight: 500;
             border-color: rgba(0, 75, 169, 1);
     }
+    &__item--extends{
+        display: flex;
+        align-items: center;
+        // justify-content: center;
+        // align-items: end;
+    }
+    &__item--extends a{
+        padding-bottom: 0;
+    }
     &__link{
         
         color: inherit;
@@ -130,9 +140,10 @@
   
     &__btn{
         display: inline-block;
-        width: 16px;
-        height: 16px;
-        margin-left: 5px;
+        letter-spacing: 0;
+        width: 26px;
+        height: 26px;
+        // margin-left: 5px;
         mask-image: url("../img/header/arrow.svg");
         mask-position: center;
         mask-repeat: no-repeat;

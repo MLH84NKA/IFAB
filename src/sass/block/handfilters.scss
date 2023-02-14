@@ -1,4 +1,4 @@
-.handfilters{
+.pattern{
     max-width: 1254px;
     &__title{
         color: $blue;
@@ -21,7 +21,7 @@
     }
     
 }
-.handfilters-choose{
+.pattern-choose{
     margin-top: 0;
     &__item{
         line-height: 28px;
@@ -31,14 +31,14 @@
         }
     }
 }
-.handfilters-examples{
+.pattern-examples{
     line-height: 28px;
     &__list{
         padding-left: 25px;
         list-style:disc;
     }
 }
-.handfilters-specs{
+.pattern-specs{
     line-height: 28px;
     &__list{
         padding-left: 25px;

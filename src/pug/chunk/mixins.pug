@@ -64,12 +64,18 @@ mixin contacts(img,text,href="")
             else
                 a(href=href).contacts-list__text= text
 mixin sublist(name, href)
-    li.menu-sublist__item 
-        a(href=href).menu-sublist__link= name
+    li.menu-sublist__item
+        if (name == asideName)
+            a(href=href).menu-sublist__link.menu-sublist__link--active= name
+        else 
+            a(href=href).menu-sublist__link= name
 
 mixin menu(title, href, subtitle)
     li.menu__item
-        a(href=href).menu__link= title 
+        if (title == asideName)
+            a(href=href).menu__link.menu__link--active= title
+        else 
+             a(href=href).menu__link= title
         if (subtitle)
             ul.menu-sublist
                 each item in subtitle
@@ -99,11 +105,12 @@ mixin aside(title,href,subtitle)
 mixin products(name,img,link)
     li.products-cell
         a(href=link)
-            .products-cell__image 
-                img(src="img/catalog/"+img, alt=img).products-cell__img
-            .products-cell__inner 
-                p.products-cell__name= name 
-                a(href=link).products-cell__link
+            .products-cell__wrapper
+                .products-cell__image 
+                    img(src="img/catalog/"+img, alt=img).products-cell__img
+                .products-cell__inner 
+                    p.products-cell__name= name 
+                    div.products-cell__link
 
 mixin bread(name,href)
     li.bread__item 

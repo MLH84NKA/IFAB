@@ -12,9 +12,10 @@ block page
         .container
             .products__wrapper 
                 include chunk/aside
-                ul.products__list
-                    each item in catalog
-                        +products(item.name,item.img,item.link)   
+                .products__inner
+                    ul.products__list
+                        each item in catalog
+                            +products(item.name,item.img,item.link)   
 
                     
                       
