@@ -10,7 +10,8 @@
     border-top: 4px solid $blue;
     position: absolute;
     z-index: 0;
-    top: 0;
+    // top: -200%;
+    top: 100%;
     right: 0px;
     transform: translateY(-100%);
     background-color: $white;
@@ -51,7 +52,7 @@
     }
 }
 .menu--active{
-    top: 122%;
+    // top: 100%;
     transform: translateY(0);
     opacity: 1;
     @include w1280{

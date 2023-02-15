@@ -1,7 +1,9 @@
+
 .geo {
     &__title {
         margin-top: 100px;
         margin-bottom: 50px;
+        
     }
 
     &__wrapper {
@@ -9,6 +11,13 @@
         // justify-content: space-between;
         column-gap: 162px;
         align-items: center;
+        @include breakpoint(lg){
+            column-gap: 40px;
+            justify-content: space-between;
+        }
+        @include breakpoint(md){
+            display: block;
+        }
     }
     &__img{
         width: 100%;
@@ -19,7 +28,8 @@
     &__image{
         max-width: 688px;
         @include breakpoint(md){
-            display: none;
+            // display: none;
+            margin-bottom: 40px;
         }
     }
 }
@@ -39,15 +49,25 @@
         line-height: 108%;
         font-family: "ptsans";
         font-weight: 700;
+        @include breakpoint(lg){
+            font-size: 20px;
+        }
     }
     &__item {
         display: flex;
         column-gap: 15px;
         align-items: center;
+        
+    }
+    &__item > svg{
+        flex-shrink: 0;
     }
     &__text{
         line-height: 108%;
         max-width: 638px;
+        @include breakpoint(lg){
+            font-size: 18px;
+        }
     }
     &__link{
         text-decoration: underline;

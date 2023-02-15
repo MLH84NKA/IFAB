@@ -12,11 +12,21 @@
         align-items: center;
         position: relative;
         z-index: 3;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        @include breakpoint(md){
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+        @include breakpoint(xs){
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
     }
     &__back{
         background-color: $white;
-        height: 144%;
-        top: -20px;
+        height: 100%;
+        top: 0;
         left: 0;
         width: 100%;
         z-index: 2;
@@ -32,15 +42,21 @@
         
     }
     &__img{
+        @include breakpoint(lg){
+            max-height: 70px;
+        }
+        @include breakpoint(md){
+            max-height: 60px;
+        }
         @include breakpoint(xs){
-            max-width: 200px;
+            max-height: 45px;
         }
     }
     &__nav{
         @include w1280{
             z-index: 1;
             position: absolute;
-            top: 0;
+            top: 100%;
             transform: translateY(-100%);
             // transform: translateX(104%);
             // display: flex;
@@ -48,7 +64,7 @@
             width: 100%;
             background-color: white;
             transition: all .3s ease-in;
-            border-top: 6px solid $blue;
+            border-top: 4px solid $blue;
             padding: 20px 0 10px 0px;
             text-align: left;
             // display: flex;
@@ -60,7 +76,7 @@
     &__nav--active{
         // transform: translateX(0);
         transform: translateY(0);
-        top: 122%;
+        // top: 122%;
         z-index: 1;
         
     }
@@ -75,7 +91,7 @@
 }
 .header__container{
     position: relative;
-    padding: 20px 20px;
+    // padding: 20px 20px;
     
 }
 .header-nav{
@@ -90,22 +106,21 @@
     }
     &__back{
         width: 100%;
-        height: calc(100% + 40px);
-        top: -20px;
+        height: 100%;
+        top: 0;
         background-color: white;
-        z-index: 2;
+        z-index: 1;
         position: absolute;
     }
     &__item{
         @include w1280{
-            margin-bottom: 10px;
-            margin-left: 60px;
+            margin-bottom: 20px;
         }
-        z-index: 3;
+        z-index: 4;
         max-width: fit-content;
         color: $grey;
         transition: all .2s linear;
-        border-bottom: 2px solid rgba(0, 75, 169, 0);
+        // border-bottom: 2px solid rgba(0, 75, 169, 0);
         &:hover{
             color: $blue;
             
@@ -116,26 +131,36 @@
     &__item--active{
             color: $blue;
             font-weight: 500;
-            border-color: rgba(0, 75, 169, 1);
+            // border-color: rgba(0, 75, 169, 1);
     }
     &__item--extends{
         display: flex;
         align-items: center;
+        z-index: 2;
+        display: block;
         // justify-content: center;
         // align-items: end;
     }
     &__item--extends a{
-        padding-bottom: 0;
+        // padding-bottom: 0;
+        position: relative;
+        z-index: 3;
+    }
+    &__item--active .header-nav__link{
+        border-bottom: 2px solid rgba(0, 75, 169, 1);
     }
     &__link{
-        
+        border-bottom: 2px solid rgba(0, 75, 169, 0);
         color: inherit;
         text-transform: uppercase;
         padding-bottom: 4px;
         font-family: 'raleway';
         font-weight: 500;
         line-height: 108.19%;
-        
+        @include w1280{
+            
+            margin-left: 60px;
+        }
     }
   
     &__btn{
@@ -143,6 +168,8 @@
         letter-spacing: 0;
         width: 26px;
         height: 26px;
+        position: relative;
+        z-index: 3;
         // margin-left: 5px;
         mask-image: url("../img/header/arrow.svg");
         mask-position: center;
@@ -153,7 +180,7 @@
         &:hover{
             background-color: $blue;
         }
-        vertical-align: middle;
+        vertical-align: text-bottom;
         
     }
     &__btn--active{

@@ -4,7 +4,7 @@ mixin nav(name,link)
             li.header-nav__item.header-nav__item--active
                 a(href= link).header-nav__link= name
                 button(type="button").header-nav__btn
-            include menu
+                include menu
         else 
              li.header-nav__item.header-nav__item--active
                 a(href= link).header-nav__link= name
@@ -13,7 +13,7 @@ mixin nav(name,link)
             li.header-nav__item 
                 a(href= link).header-nav__link= name
                 button(type="button").header-nav__btn
-            include menu
+                include menu
         else 
             li.header-nav__item 
                 a(href= link).header-nav__link= name

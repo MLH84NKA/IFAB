@@ -1,10 +1,12 @@
-.menu 
-    .menu__wrapper
-        ul.menu__list 
-            each item in menu1 
-                +menu(item.title, item.href, item.subtitle)
-            li.menu__item
-                each item in menu2 
-                    a(href= item.href).menu__link= item.title
+.header-nav__menu
+    .menu
+        .menu__wrapper
+            ul.menu__list 
+                each item in menu1 
+                    +menu(item.title, item.href, item.subtitle)
+                li.menu__item
+                    each item in menu2 
+                        a(href= item.href).menu__link= item.title
+    .header__back
                 
     

@@ -20,9 +20,12 @@
         //     width: calc(100%/5 - 20px);
         // }
         // height: 263px;
+        @include breakpoint(md){
+            max-width: calc(50% - 20px);
+        }
     }
     &__img{
+        display: block;
         width: 100%;
-        
     }
 }

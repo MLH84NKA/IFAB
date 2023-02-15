@@ -3,9 +3,10 @@
         display: flex;
         justify-content: space-between;
         margin-bottom: 160px;
-        column-gap: 20px;
+        column-gap: 40px;
         @include breakpoint(xl){
             flex-direction: column-reverse;
+            margin-bottom: 80px;
         }
         
     }
@@ -26,14 +27,23 @@
         margin-bottom: 70px;
         max-width: 904px;
         line-height: 60.48px;
+        @include breakpoint(xll){
+            font-size: 50px;
+        }
         @include breakpoint(xl){
+            font-size: 48px;
+            line-height: 105%;
+        }
+        @include breakpoint(md){
+            font-size: 38px;
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 40px;
         }
         @include breakpoint(sm){
-            font-size: 32px;
-            line-height: 34px;
-            text-align: center;
+            font-size: 28px;
+        }
+        @include breakpoint(xs){
+            font-size: 24px;
         }
     }
 
@@ -43,6 +53,10 @@
         font-weight: 700;
         font-size: 24px;
         line-height: 25.92px;
+        @include breakpoint(md){
+            font-size: 20px;
+            line-height: 105%;
+        }
         @include breakpoint(sm){
             text-align: center;
         }
